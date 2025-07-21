@@ -1,0 +1,69 @@
+/* ExpenseForm.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.expense-form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #1e293b;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.expense-form-title {
+  font-size: 1.8rem;
+  color: #60a5fa;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.expense-form input,
+.expense-form textarea {
+  padding: 12px;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.expense-form input:focus,
+.expense-form textarea:focus {
+  outline: none;
+  border-color: #60a5fa;
+  transform: scale(1.02);
+}
+
+.expense-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.expense-submit-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.expense-submit-btn:hover {
+  background-color: #2563eb;
+  transform: scale(1.03);
+}

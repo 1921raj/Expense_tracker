@@ -1,0 +1,72 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+out/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Mac system files
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+
+# Database
+*.sqlite3
+*.db
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# Testing
+coverage/
+.nyc_output/
+.jest/
+
+# Next.js
+.next/
+
+# React Native
+.expo/
+*.expo
+
+# Misc
+*.swp
+*.zip
+*.tar
+*.gz

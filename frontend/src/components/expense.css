@@ -1,0 +1,102 @@
+/* ExpenseList.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.expense-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  background: #1e293b;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.expense-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #60a5fa;
+}
+
+.expense-table-container {
+  /* overflow-x: auto; */
+  border-radius: 10px;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.expense-table thead {
+  background: #0f172a;
+}
+
+.expense-table th {
+  padding: 14px 18px;
+  background-color: #1e293b;
+  color: #facc15;
+  text-align: left;
+  font-weight: 600;
+}
+
+.expense-table td {
+  padding: 14px 18px;
+  background-color: #334155;
+  color: #ffffff;
+  border-top: 2px solid #1e293b;
+  border-bottom: 2px solid #1e293b;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.expense-table tr:hover td {
+  background-color: #475569;
+  transform: scale(1.01);
+}
+
+.status-badge {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.status-approved {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.status-rejected {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.status-pending {
+  background-color: rgba(234, 179, 8, 0.15);
+  color: #eab308;
+}
+
+.expense-select {
+  padding: 6px 10px;
+  background-color: #1e293b;
+  color: #fff;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.expense-select:hover {
+  background-color: #334155;
+  transform: scale(1.03);
+  cursor: pointer;
+}
