@@ -2,20 +2,21 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import Home from './pages/Home';
 import Admin from './pages/Admin';
-// import { useState } from 'react';
 import { useEffect, useState } from 'react';
-// function App() {
-//   const [user, setUser] = useState(null);
+import axios from 'axios'; // Make sure this is imported
 
 const App = () => {
   const [user, setUser] = useState(null);
+
+  // ✅ Use environment variable or direct URL
+  const API_BASE = process.env.REACT_APP_API_URL || 'https://expensetracker-production-6f05.up.railway.app';
 
   useEffect(() => {
     const checkUser = async () => {
       const token = localStorage.getItem('token');
       if (token) {
         try {
-          const { data } = await axios.get('http://localhost:5000/api/auth/profile', {
+          const { data } = await axios.get(`${API_BASE}/api/auth/profile`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           setUser(data.user);
@@ -30,8 +31,6 @@ const App = () => {
     checkUser();
   }, []);
 
-
-
   return (
     <Router>
       <Routes>
@@ -41,6 +40,6 @@ const App = () => {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
